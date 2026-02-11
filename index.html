@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Civic Systems City Sim</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div class="title">
+          <div class="h1">Civic Systems City Sim</div>
+          <div class="sub" id="meta"></div>
+        </div>
+        <div class="controls">
+          <button id="btnStep">Step 1 Month</button>
+          <button id="btnRun">Run</button>
+          <button id="btnReset">Reset</button>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="panel left">
+          <div class="panelTitle">Budget & Policy</div>
+
+          <div class="row">
+            <label>Overlay</label>
+            <select id="overlay">
+              <option value="satisfaction">Satisfaction</option>
+              <option value="crime">Crime</option>
+              <option value="water">Water Outages</option>
+              <option value="roads">Roads Condition</option>
+            </select>
+          </div>
+
+          <div class="row">
+            <label>Property Tax Rate</label>
+            <input id="taxProperty" type="range" min="0.002" max="0.03" step="0.0005" />
+            <div class="val" id="taxPropertyVal"></div>
+          </div>
+
+          <div class="row">
+            <label>Sales Tax Rate</label>
+            <input id="taxSales" type="range" min="0.00" max="0.08" step="0.001" />
+            <div class="val" id="taxSalesVal"></div>
+          </div>
+
+          <div class="row">
+            <label>Enforcement Intensity</label>
+            <input id="enforcement" type="range" min="0" max="1" step="0.01" />
+            <div class="val" id="enforcementVal"></div>
+          </div>
+
+          <div class="panelTitle small">Service Budgets (Monthly)</div>
+
+          <div class="grid2">
+            <div class="row">
+              <label>Police</label>
+              <input id="bPolice" type="range" min="0" max="2000000" step="10000" />
+              <div class="val" id="bPoliceVal"></div>
+            </div>
+            <div class="row">
+              <label>Fire</label>
+              <input id="bFire" type="range" min="0" max="1500000" step="10000" />
+              <div class="val" id="bFireVal"></div>
+            </div>
+            <div class="row">
+              <label>Health</label>
+              <input id="bHealth" type="range" min="0" max="1500000" step="10000" />
+              <div class="val" id="bHealthVal"></div>
+            </div>
+            <div class="row">
+              <label>Education</label>
+              <input id="bEducation" type="range" min="0" max="3000000" step="10000" />
+              <div class="val" id="bEducationVal"></div>
+            </div>
+            <div class="row">
+              <label>Transit</label>
+              <input id="bTransit" type="range" min="0" max="2000000" step="10000" />
+              <div class="val" id="bTransitVal"></div>
+            </div>
+            <div class="row">
+              <label>Sanitation</label>
+              <input id="bSanitation" type="range" min="0" max="1500000" step="10000" />
+              <div class="val" id="bSanitationVal"></div>
+            </div>
+            <div class="row">
+              <label>Water</label>
+              <input id="bWater" type="range" min="0" max="1500000" step="10000" />
+              <div class="val" id="bWaterVal"></div>
+            </div>
+            <div class="row">
+              <label>Maintenance</label>
+              <input id="bMaintenance" type="range" min="0" max="2500000" step="10000" />
+              <div class="val" id="bMaintenanceVal"></div>
+            </div>
+          </div>
+
+          <div class="panelTitle small">City Report</div>
+          <pre id="report" class="report"></pre>
+        </section>
+
+        <section class="center">
+          <canvas id="canvas" width="900" height="650"></canvas>
+          <div class="hint">Click a district to inspect it.</div>
+        </section>
+
+        <section class="panel right">
+          <div class="panelTitle">District Inspector</div>
+          <pre id="inspector" class="inspector"></pre>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
