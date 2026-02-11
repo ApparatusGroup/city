@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="City icon">
+  <rect width="64" height="64" rx="10" fill="#0f1522"/>
+  <rect x="10" y="28" width="12" height="24" fill="#7aa2ff"/>
+  <rect x="26" y="18" width="12" height="34" fill="#9bd97c"/>
+  <rect x="42" y="24" width="12" height="28" fill="#f2c14e"/>
+  <rect x="8" y="52" width="48" height="4" fill="#e8eefc"/>
+</svg>
