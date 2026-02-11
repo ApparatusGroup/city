@@ -1,3 +1,4 @@
+import "./style.css";
 import type { OverlayMode } from "./types";
 import { createDefaultCity, districtSummary, stepMonth } from "./sim";
 import { pickDistrictAt, render, type RenderState } from "./ui";
